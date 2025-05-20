@@ -1,6 +1,6 @@
 // leitor de qr code
 const qrcode = require('qrcode-terminal');
-const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js'); // Mudança Buttons
+const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js'); 
 const client = new Client();
 // serviço de leitura do qr code
 client.on('qr', qr => {
