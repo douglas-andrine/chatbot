@@ -83,7 +83,7 @@ client.on('message', async msg => {
         await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000);
-        await client.sendMessage(msg.from, 'Sorteio de em prêmios todo ano.\n\nAtendimento médico ilimitado 24h por dia.\n\nReceitas de medicamentos');
+        await client.sendMessage(msg.from, 'Na CoffeeTecnologia, nosso foco é simplificar o dia a dia do seu negócio com soluções inteligentes, práticas e sob medida.\n\nCada negócio é único, e por isso criamos planos personalizados para cada cliente.\n\nA gente escuta sua necessidade, entende seu modelo de operação e entrega uma solução que se encaixa como uma luva.');
         
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
