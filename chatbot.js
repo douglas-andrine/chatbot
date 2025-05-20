@@ -98,7 +98,7 @@ client.on('message', async msg => {
         await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000);
-        await client.sendMessage(msg.from, 'Você pode aderir aos nossos planos diretamente pelo nosso site ou pelo WhatsApp.\n\nApós a adesão, você terá acesso imediato');
+        await client.sendMessage(msg.from, 'Você pode aderir aos nossos planos diretamente pelo nosso site ou pelo WhatsApp.\n\nPara contratar os serviços da CoffeeTecnologia é simples:\nvocê entra em contato com nosso time, fazemos o cadastro da sua empresa, montamos um plano personalizado de acordo com a sua necessidade e enviamos um contrato digital.\nApós a assinatura, ativamos o sistema e enviamos os dados de acesso para você começar a usar. Se precisar, ainda oferecemos treinamento para sua equipe e suporte contínuo para garantir que tudo funcione da melhor forma possível.');
 
 
         await delay(3000); //delay de 3 segundos
