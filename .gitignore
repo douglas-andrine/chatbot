@@ -1,0 +1,28 @@
+# Ignora a pasta node_modules
+node_modules/
+
+# Ignora o build da aplicação (se tiver)
+dist/
+build/
+
+# Ignora o Puppeteer Chromium baixado
+**/.local-chromium/
+
+# Ignora arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignora arquivos de log
+*.log
+
+# Ignora arquivos de ambiente (se usar .env)
+.env
+.env.local
+
+# Ignora pastas de cache do npm e do yarn
+.npm/
+.yarn/
+
+# Ignora configurações do editor
+.vscode/
+.idea/
