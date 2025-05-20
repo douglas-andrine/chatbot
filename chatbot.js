@@ -51,7 +51,7 @@ client.on('message', async msg => {
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000);
-        await client.sendMessage(msg.from, 'COMO FUNCIONA?\nÉ muito simples.\n\n1º Passo\nFaça seu cadastro e escolha o plano que desejar.\n\n2º Passo\nApós efetuar o pagamento do plano escolhido você já terá acesso a nossa área exclusiva para começar seu atendimento na mesma hora.\n\n3º Passo\nSempre que precisar');
+        await client.sendMessage(msg.from, 'COMO FUNCIONA?\nÉ muito simples.\n\n1º Passo\nEntre em contato com a CoffeeTecnologia.\n\n2º Passo\nCadastro da sua empresa ou negócio.\n\n3º Passo\nMontamos um plano sob medida para você.\n\n4º Passo\nAssinatura do contrato digital.\n\n5º Passo\nAtivação e envio dos dados de acesso.\n\n6º Passo\nTreinamento para sua equipe.');
 
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
