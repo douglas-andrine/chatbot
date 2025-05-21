@@ -28,7 +28,7 @@ client.on('message', async msg => {
         await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
         const contact = await msg.getContact(); //Pegando o contato
         const name = contact.pushname; //Pegando o nome do contato
-        await client.sendMessage(msg.from,'Olá! '+ name.split(" ")[0] + ' sou o Antônio, assistente virtual da Coffee Tecnologia. Como posso te ajudar hoje? Escolha uma das opções abaixo para continuarmos:\n\n1 - Entender como funciona\n2 - Ver planos e preços💰\n3 - Saber como a Coffee ajuda☕\n4 - Contratar ou ativar serviços🛠️\n5 - Outras perguntas❓'); //Primeira mensagem de texto
+        await client.sendMessage(msg.from,'Olá! '+ name.split(" ")[0] + ' sou o Antônio🤓, assistente virtual da Coffee Tecnologia. Como posso te ajudar hoje? Escolha uma das opções abaixo para continuarmos:\n\n1 - Entender como funciona\n2 - Ver planos e preços💰\n3 - Saber como a Coffee ajuda☕\n4 - Contratar ou ativar serviços🛠️\n5 - Outras perguntas❓'); //Primeira mensagem de texto
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(5000); //Delay de 5 segundos
@@ -83,7 +83,7 @@ client.on('message', async msg => {
         await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000);
-        await client.sendMessage(msg.from, '☕Na CoffeeTecnologia, nosso foco é simplificar o dia a dia do seu negócio com soluções inteligentes, práticas e sob medida.\n\n🧩Cada negócio é único, e por isso criamos planos personalizados para cada cliente.\n\n👂A gente escuta sua necessidade, entende seu modelo de operação e entrega uma solução que se encaixa como uma luva.🧤');
+        await client.sendMessage(msg.from, '💻Na CoffeeTecnologia, nosso foco é simplificar o dia a dia do seu negócio com soluções inteligentes, práticas e sob medida.\n\n🧩Cada negócio é único, e por isso criamos planos personalizados para cada cliente.\n\n👂A gente escuta sua necessidade, entende seu modelo de operação e entrega uma solução que se encaixa como uma luva.🧤');
         
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
