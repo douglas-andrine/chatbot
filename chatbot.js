@@ -1,3 +1,27 @@
+// Importando as dependências
+const qrcode = require('qrcode-terminal');
+const { Client, LocalAuth } = require('whatsapp-web.js');
+
+// Criando a instância do cliente
+const client = new Client({
+    authStrategy: new LocalAuth() // Salva a sessão automaticamente
+});
+
+// Gerando o QRCode no terminal
+client.on('qr', (qr) => {
+    console.log('⚡ Escaneie o QR Code abaixo para conectar:');
+    qrcode.generate(qr, { small: true });
+});
+
+// Confirmação de conexão
+client.on('ready', () => {
+    console.log('✅ Tudo certo! WhatsApp conectado.');
+});
+
+// Função de delay
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+// Funil de mensagens
 client.on('message', async msg => {
     const chat = await msg.getChat();
 
@@ -7,6 +31,7 @@ client.on('message', async msg => {
         await delay(3000);
         const contact = await msg.getContact();
         const name = contact.pushname;
+
         await client.sendMessage(msg.from, `Olá! ${name.split(" ")[0]} sou o Antônio🤓, assistente virtual da Coffee Tecnologia. Como posso te ajudar hoje? Escolha uma das opções abaixo para continuarmos:\n\n1 - Entender como funciona\n2 - Ver planos e preços💰\n3 - Saber como a Coffee ajuda☕\n4 - Contratar ou ativar serviços🛠️\n5 - Outras perguntas❓`);
     }
 
@@ -49,7 +74,7 @@ client.on('message', async msg => {
         await client.sendMessage(msg.from, '❓Se você tiver outras dúvidas ou precisar de mais informações...');
     }
 
-    // 🚨 Mensagem padrão para qualquer outra coisa
+    // Mensagem padrão para opções inválidas
     if (!['1', '2', '3', '4', '5'].includes(msg.body) && msg.from.endsWith('@c.us')) {
         await delay(3000);
         await chat.sendStateTyping();
@@ -57,3 +82,6 @@ client.on('message', async msg => {
         await client.sendMessage(msg.from, '🚫 Essa opção não consta no nosso menu. Por favor, escolha uma das opções do menu ou aguarde que, em breve, um de nossos atendentes irá entrar em contato. ☕');
     }
 });
+
+// Inicializando o cliente
+client.initialize();
