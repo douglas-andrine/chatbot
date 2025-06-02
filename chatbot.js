@@ -2,21 +2,42 @@
 const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth } = require('whatsapp-web.js');
 
-// Criando a instância do cliente
+// Criando a instância do cliente com LocalAuth (mantém a sessão automaticamente)
 const client = new Client({
-    authStrategy: new LocalAuth() // Salva a sessão automaticamente
+    authStrategy: new LocalAuth(),
+    puppeteer: {
+        headless: true, // Muda pra false se quiser ver o navegador abrindo
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
 });
 
-// Gerando o QRCode no terminal
+// Evento: Geração do QR Code
 client.on('qr', (qr) => {
     console.log('⚡ Escaneie o QR Code abaixo para conectar:');
     qrcode.generate(qr, { small: true });
 });
 
-// Confirmação de conexão
+// Evento: Pronto
 client.on('ready', () => {
-    console.log('Tudo certo! WhatsApp conectado.');
+    console.log('✅ Tudo certo! WhatsApp conectado.');
 });
+
+// Evento: Autenticação bem-sucedida
+client.on('authenticated', () => {
+    console.log('🔐 Autenticado com sucesso!');
+});
+
+// Evento: Falha na autenticação
+client.on('auth_failure', (msg) => {
+    console.error('❌ Falha na autenticação: ', msg);
+});
+
+// Evento: Cliente desconectado
+client.on('disconnected', (reason) => {
+    console.warn('⚠️ Cliente desconectado: ', reason);
+});
+
+// Inicializando o cliente
 
 // Função de delay
 const delay = ms => new Promise(res => setTimeout(res, ms));
