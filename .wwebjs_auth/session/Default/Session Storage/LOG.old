@@ -1,2 +1,3 @@
-2025/06/02-12:43:28.661 720d Creating DB /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Session Storage since it was missing.
-2025/06/02-12:43:28.670 720d Reusing MANIFEST /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Session Storage/MANIFEST-000001
+2025/06/02-13:31:16.132 79f0 Reusing MANIFEST /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Session Storage/MANIFEST-000001
+2025/06/02-13:31:16.133 79f0 Recovering log #3
+2025/06/02-13:31:16.133 79f0 Reusing old log /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Session Storage/000003.log 
