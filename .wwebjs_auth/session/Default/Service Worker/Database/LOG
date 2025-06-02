@@ -1,2 +1,3 @@
-2025/06/02-12:43:30.284 7241 Creating DB /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Service Worker/Database since it was missing.
-2025/06/02-12:43:30.293 7241 Reusing MANIFEST /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Service Worker/Database/MANIFEST-000001
+2025/06/02-13:31:15.714 79ed Reusing MANIFEST /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Service Worker/Database/MANIFEST-000001
+2025/06/02-13:31:15.715 79ed Recovering log #3
+2025/06/02-13:31:15.715 79ed Reusing old log /home/douglas/Documentos/chatbotcoffee/.wwebjs_auth/session/Default/Service Worker/Database/000003.log 
