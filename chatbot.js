@@ -15,7 +15,7 @@ client.on('qr', (qr) => {
 
 // Confirmação de conexão
 client.on('ready', () => {
-    console.log('✅ Tudo certo! WhatsApp conectado.');
+    console.log('Tudo certo! WhatsApp conectado.');
 });
 
 // Função de delay
